@@ -9,10 +9,18 @@ document.querySelector(".per").innerHTML = `${per}`;
 
 if (localStorage.getItem("img") === "null"){
     document.querySelector(".img").remove();
-    document.querySelector(".itype").style.fontSize = "7vh";
+    document.querySelector(".itype").style.fontSize = "4vh";
     document.querySelector(".itype").style.color = "red";
     document.querySelector(".itype").style.textShadow = "2px 0 0 #fff, -2px 0 0 #fff, 0 2px 0 #fff, 0 -2px 0 #fff, 2px 0 0 #fff, -2px 0 0 #fff, 0 2px 0 #fff, 0 -2px 0 #fff, 2px 0 0 #fff, -2px 0 0 #fff, 0 2px 0 #fff, 0 -2px 0 #fff, 2px 0 0 #fff, -2px 0 0 #fff, 0 2px 0 #fff, 0 -2px 0 #fff, 1px 1px #fff, -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff";
-    document.querySelector(".itype").innerHTML = `Work  -  ${ctr%35}`;
+    if(ctr % 140 === 0){
+        document.querySelector(".itype").innerHTML = `Long Break`;
+    }
+    else if(ctr % 35 === 0){
+        document.querySelector(".itype").innerHTML = `Short Break`;
+    }
+    else{
+        document.querySelector(".itype").innerHTML = `Work  -  ${ctr % 35}`;
+    }
     beep();
 }
 
@@ -21,7 +29,7 @@ function play(e){
     localStorage.setItem("img", "null")
     localStorage.setItem("ctr", "1")    
     ctr = 1;
-    document.querySelector(".itype").style.fontSize = "7vh";
+    document.querySelector(".itype").style.fontSize = "4vh";
     document.querySelector(".itype").style.color = "red";
     document.querySelector(".itype").style.textShadow = "2px 0 0 #fff, -2px 0 0 #fff, 0 2px 0 #fff, 0 -2px 0 #fff, 2px 0 0 #fff, -2px 0 0 #fff, 0 2px 0 #fff, 0 -2px 0 #fff, 2px 0 0 #fff, -2px 0 0 #fff, 0 2px 0 #fff, 0 -2px 0 #fff, 2px 0 0 #fff, -2px 0 0 #fff, 0 2px 0 #fff, 0 -2px 0 #fff, 1px 1px #fff, -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff";
     document.querySelector(".itype").innerHTML = `Work  -  ${ctr % 35}`;
