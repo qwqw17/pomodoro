@@ -1,0 +1,94 @@
+body{
+  position :relative;
+}
+
+body div{
+  text-align: center;
+}
+
+.antipos{
+    /* height:10vh; */
+    /* width: 10vw; */
+    background-color: black;
+}
+
+.antineg{
+    /* height:10vh; */
+    /* width: 10vw; */
+    background-color: white;
+}
+
+.pos{
+  height: 50vh;
+  width: 98vw;
+  position : absolute;
+}
+.neg{
+  height: 50vh;
+  width: 98vw;
+  color:white;
+  background-color: black;
+  position :absolute;
+  top:50vh;
+}
+
+.pp{
+  position:absolute;
+  z-index: 1;
+  top:45vh;
+  left:35vw;
+}
+
+.reset{
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+.img{
+  height:10vh;
+  width:30vw;
+}
+
+.antipos{
+  height:10vh;
+  width:20vw;
+  position: absolute;
+  top:3vh;
+  right:0vw;
+  z-index: 10;
+}
+
+.antineg{
+  height:10vh;
+  width:20vw;
+  position: absolute;
+  bottom:8vh;
+  right:0vw;
+  z-index: 10;
+}
+
+.nval{
+  font-size: 12vh;
+  position:absolute;
+  top:30vh;
+  /* left:50vw; */
+}
+
+.npos{
+  font-size: 12vh;
+  position:absolute;
+  /* left:52vw; */
+}
+
+.per{
+  font-size: 12vh;
+  position: absolute;
+  top:60%;
+  /* left:10vw; */
+}
+
+.itype{
+    text-align: center;
+}
+

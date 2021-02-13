@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Pomodoro</title>
+    <script type="text/javascript">
+        let ctr, pos, neg, img;
+        if(localStorage.getItem('ctr'))
+            ctr = parseInt(localStorage.getItem('ctr'))
+        else{
+            ctr = -1;
+            localStorage.setItem('ctr', "-1")
+        }
+        if (localStorage.getItem('pos'))
+            pos = parseInt(localStorage.getItem('pos'))
+        else {
+            pos = 0;
+            localStorage.setItem('pos', "0")
+        }
+        if (localStorage.getItem('neg'))
+            neg = parseInt(localStorage.getItem('neg'))
+        else {
+            neg = 0;
+            localStorage.setItem('neg', "0")
+        }
+        if (localStorage.getItem('img'))
+            img = localStorage.getItem('img')
+        else {
+            img = "play.png";
+            localStorage.setItem('img', "play.png")
+        }
+    </script>
+    <link rel="stylesheet" type="text/css" href="index.css" />
+</head>
+<body>
+    <div class="pos" onclick="incrementPos()">
+        <div onclick="reset()" class='reset'>Reset</div>
+        <div class="npos">0</div>
+        <div class="per">0</div>
+        <!-- "parseInt((pos * 10000) / (pos - neg)) / 100" -->
+        <div class="antipos" onclick="decrementPos()"></div>
+    </div>
+    <div class="neg" onclick="decrementNeg()">
+        <div class="nval">0</div>
+        <div class="antineg" onclick="incrementNeg()"></div>
+    </div>
+    <div class="pp">
+        <img src="play.png" class="img" onclick="play(this)" />
+        <div class="itype"></div>
+    </div>
+    <script type="text/javascript" src="index.js"></script>
+</body>
+</html>
